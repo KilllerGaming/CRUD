@@ -109,7 +109,12 @@
 
 
     function addTask() {
+
       let task = input.value
+
+      if(task <= 0 ){
+        alert("Please enter a task!");
+      } else {
 
       let listItem = document.createElement('div')
       listItem.classList.add('list-item')
@@ -148,6 +153,8 @@
 
       saveData();
 
+      }
+
     }
 
     function saveData() {
@@ -156,6 +163,7 @@
 
     function showTask() {
       container.innerHTML = localStorage.getItem("data");
+      saveData();
     }
 
     function removeTask(listItem) {
