@@ -4,7 +4,7 @@ const container = document.querySelector(".list-container")
 
 
 
-function add() {
+function addTask() {
 	let task = input.value
 
 	let listItem = document.createElement('div')
